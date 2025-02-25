@@ -178,7 +178,7 @@ func (h *DatadogHook) buildUrl() (string, error) {
 		return "", err
 	}
 	parameters := url.Values{}
-	parameters.Add("ddsource", "golang")
+	parameters.Add("ddsource", h.Source)
 	parameters.Add("service", h.Service)
 	parameters.Add("hostname", h.Hostname)
 	var tags []string
